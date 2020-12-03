@@ -27,6 +27,7 @@ export * from './lib/pipe/contribution-format.pipe';
 export * from './lib/pipe/contribution-type.pipe';
 export * from './lib/pipe/extract-source-field.pipe';
 export * from './lib/pipe/id-attribute.pipe';
+export * from './lib/pipe/item-holdings-call-number.pipe';
 export * from './lib/pipe/join.pipe';
 export * from './lib/pipe/main-title.pipe';
 export * from './lib/pipe/patron-blocked-message.pipe';

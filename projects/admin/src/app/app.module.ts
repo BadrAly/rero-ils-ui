@@ -27,7 +27,7 @@ import {
   CoreConfigService, LocalStorageService, RecordModule, RemoteTypeaheadService,
   TranslateLoader, TranslateService, TruncateTextPipe
 } from '@rero/ng-core';
-import { LoggedUserService, MainTitlePipe, SharedConfigService, SharedModule, UserService } from '@rero/shared';
+import { ItemHoldingsCallNumberPipe, LoggedUserService, MainTitlePipe, SharedConfigService, SharedModule, UserService } from '@rero/shared';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { BsDatepickerModule, BsLocaleService } from 'ngx-bootstrap/datepicker';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -147,6 +147,7 @@ import { CustomShortcutHelpComponent } from './widgets/custom-shortcut-help/cust
 import { FrontpageComponent } from './widgets/frontpage/frontpage.component';
 import { MenuMobileComponent } from './menu/menu-mobile/menu-mobile.component';
 import { SubMenuComponent } from './menu/menu-mobile/sub-menu/sub-menu.component';
+import { InheritedCallNumbersComponent } from './record/detail-view/document-detail-view/inherited-call-numbers/inherited-call-numbers.component';
 
 /** Init application factory */
 export function appInitFactory(appInitService: AppInitService) {
@@ -241,7 +242,8 @@ export function appInitFactory(appInitService: AppInitService) {
     MenuUserComponent,
     MenuDashboardComponent,
     MenuMobileComponent,
-    SubMenuComponent
+    SubMenuComponent,
+    InheritedCallNumbersComponent
   ],
   imports: [
     AppRoutingModule,
@@ -323,7 +325,8 @@ export function appInitFactory(appInitService: AppInitService) {
       provide: HotkeysService,
       useClass: HotkeysService
     },
-    MainTitlePipe
+    MainTitlePipe,
+    ItemHoldingsCallNumberPipe
   ],
   entryComponents: [
     IllRequestsBriefViewComponent,
